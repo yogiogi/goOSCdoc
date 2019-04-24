@@ -109,8 +109,10 @@ Username and password for login as admin or content provider please contact me.
     ```
     
 #### Login with Social Media
-This API is used to login a user with social media like google, facebook and twitter.
-If the login is successful, it is automatically registered as a user in the application
+
+##### Login in Web
+This API is used to login with social media like google, facebook and twitter from one stop click website.
+If the login is successful, it is automatically registered a user in to one stop click database.
 
 * **URL** : 
     - **Google** : `/auth/google`
@@ -141,7 +143,70 @@ If the login is successful, it is automatically registered as a user in the appl
         "data": []
     }
     ```
-    
+##### Login From Mobile
+This API is used to login a user with social media like google, facebook and twitter from mobile phone.
+If the login is successful, it is automatically registered a user in to one stop click database.
+
+* **URL** : 
+    `/auth/user/socialmedialogin`
+* **Method** : `POST`
+*  **URL Params**
+   `None`
+* **Data Params**
+  ```javascript
+  {
+    "email":"emailku@mail.com",
+    "firtsname": "firstname",
+    "lastname": "lastname",
+    "origin": "facebook" / "google" / "twitter"
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** `200`
+  * **Content:** 
+    ```javascript
+    {
+        "code": 200,
+	    "message": "Login Successfully",
+	    "data": {
+    		"user": {
+        		"id": 169,
+        		"email": "emailku@mail.com",
+        		"password": "",
+        		"firtsname": "firstname",
+        		"lastname": "lastname",
+        		"role_id": 3,
+        		"role_name": "",
+        		"origin": "",
+        		"created_at": {
+        			"Time": "2019-04-24T15:08:46.789275Z",
+        			"Valid": true
+        		},
+        		"updated_at": {
+        			"Time": "0001-01-01T00:00:00Z",
+        			"Valid": false
+        		},
+        		"api_permitted_list": null
+    	    },
+	        "token": ""
+        }
+    }
+    ```
+ 
+* **Error Response:**
+
+  * **Code:** `500`
+  * **Content:**
+    ```javascript
+    {
+        "code": 500,
+        "message": "String message",
+        "data": []
+    }
+    ```
+
 #### Forgot Password
 This API is used to forgot password action.
 
