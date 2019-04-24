@@ -144,8 +144,8 @@ If the login is successful, it is automatically registered a user in to one stop
     }
     ```
 ##### Login From Mobile
-This API is used to login a user with social media like google, facebook and twitter from mobile phone.
-If the login is successful, it is automatically registered a user in to one stop click database.
+This API is used to login with social media like google, facebook and twitter from mobile phone.
+After successfull login with social media, then call this API to login to OSC, this API will automatically registering a user in to one stop click database and user will automatically logged in to OSC.
 
 * **URL** : 
     `/auth/user/socialmedialogin`
