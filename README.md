@@ -110,7 +110,7 @@ Username and password for login as admin or content provider please contact me.
     
 #### Login with Social Media
 
-##### Login in Web
+##### Login From Web
 This API is used to login with social media like google, facebook and twitter from one stop click website.
 If the login is successful, it is automatically registered a user in to one stop click database.
 
@@ -179,7 +179,7 @@ After successfull login with social media, then call this API to login to OSC, t
         		"lastname": "lastname",
         		"role_id": 3,
         		"role_name": "",
-        		"origin": "",
+        		"origin": "facebook",
         		"created_at": {
         			"Time": "2019-04-24T15:08:46.789275Z",
         			"Valid": true
