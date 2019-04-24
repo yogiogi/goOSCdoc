@@ -50,6 +50,7 @@ This API is used to register new Users.
 
 #### Login
 This API is used to login a user registered.
+Username and password for login as admin or content provider please contact me.
 
 * **URL** : `/auth`
 * **Method** : `POST`
